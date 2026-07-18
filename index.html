@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Central Optimizer — Advanced System Optimization</title>
+    <meta name="description" content="Space Central Optimizer — Free advanced PC optimization, cleaning, boosting, and benchmarking tool for everyone.">
+    <meta name="keywords" content="PC optimizer, system cleaner, RAM booster, game mode, benchmark, startup manager">
+    <meta property="og:title" content="Space Central Optimizer">
+    <meta property="og:description" content="Free advanced system optimization for everyone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="app">
+        <!-- Title bar -->
+        <div class="titlebar">
+            <div class="titlebar-left">
+                <div class="titlebar-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <span class="titlebar-title">Space Central<span class="accent">.</span>optimizer</span>
+                <span class="titlebar-version">v4.0.0</span>
+            </div>
+            <div class="titlebar-right">
+                <span class="titlebar-status"><span class="status-dot"></span><span id="statusText">READY</span></span>
+                <div class="titlebar-buttons">
+                    <button class="tb-btn minimize">─</button>
+                    <button class="tb-btn maximize">□</button>
+                    <button class="tb-btn close">✕</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <nav class="sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-label">MAIN</div>
+                    <button class="nav-item active" data-tab="dashboard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Dashboard</span></button>
+                    <button class="nav-item" data-tab="cleaner"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span>Cleaner</span></button>
+                    <button class="nav-item" data-tab="booster"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Booster</span></button>
+                    <button class="nav-item" data-tab="gamemode"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="17" cy="10" r="1"/><circle cx="15" cy="13" r="1"/></svg><span>Game Mode</span></button>
+                    <button class="nav-item" data-tab="startup"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Startup</span></button>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-label">TOOLS</div>
+                    <button class="nav-item" data-tab="network"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg><span>Network</span></button>
+                    <button class="nav-item" data-tab="registry"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>Registry</span></button>
+                    <button class="nav-item" data-tab="privacy"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Privacy</span></button>
+                    <button class="nav-item" data-tab="diskanalyzer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg><span>Disk Analyzer</span></button>
+                    <button class="nav-item" data-tab="processes"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg><span>Processes</span></button>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-label">ADVANCED</div>
+                    <button class="nav-item" data-tab="sysinfo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span>System Info</span></button>
+                    <button class="nav-item" data-tab="benchmark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Benchmark</span></button>
+                    <button class="nav-item" data-tab="duplicates"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="2" width="13" height="16" rx="1"/><rect x="3" y="6" width="13" height="16" rx="1"/></svg><span>Duplicates</span></button>
+                    <button class="nav-item" data-tab="security"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Security</span></button>
+                    <button class="nav-item" data-tab="settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Settings</span></button>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="sidebar-user"><div class="user-avatar">🚀</div><div class="user-info"><span class="user-name">Space Central</span><span class="user-role">Public Access</span></div></div>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <main class="content" id="content">
+                <!-- ==================== DASHBOARD ==================== -->
+                <div class="tab-content active" id="tab-dashboard">
+                    <div class="content-header">
+                        <h1>System Dashboard</h1>
+                        <div class="header-actions">
+                            <button class="btn btn-accent" id="btnQuickScan"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Quick Scan</button>
+                            <button class="btn btn-ghost" id="btnOptimizeAll"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Optimize All</button>
+                        </div>
+                    </div>
+                    <div class="health-section">
+                        <div class="health-ring-container">
+                            <svg class="health-ring" viewBox="0 0 180 180"><circle class="health-ring-bg" cx="90" cy="90" r="80"/><circle class="health-ring-fill" cx="90" cy="90" r="80" id="healthRingFill"/></svg>
+                            <div class="health-ring-text"><span class="health-score" id="healthScore">0</span><span class="health-label">HEALTH</span></div>
+                        </div>
+                        <div class="health-details">
+                            <div class="health-item"><div class="health-item-header"><span class="health-item-label">CPU Performance</span><span class="health-item-value" id="cpuPerf">0%</span></div><div class="progress-bar"><div class="progress-fill cpu" id="cpuBar"></div></div></div>
+                            <div class="health-item"><div class="health-item-header"><span class="health-item-label">Memory Usage</span><span class="health-item-value" id="memPerf">0%</span></div><div class="progress-bar"><div class="progress-fill mem" id="memBar"></div></div></div>
+                            <div class="health-item"><div class="health-item-header"><span class="health-item-label">Disk Health</span><span class="health-item-value" id="diskPerf">0%</span></div><div class="progress-bar"><div class="progress-fill disk" id="diskBar"></div></div></div>
+                            <div class="health-item"><div class="health-item-header"><span class="health-item-label">Security Score</span><span class="health-item-value" id="secPerf">0%</span></div><div class="progress-bar"><div class="progress-fill sec" id="secBar"></div></div></div>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card"><div class="stat-icon cpu-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></div><div class="stat-info"><span class="stat-label">CPU Temp</span><span class="stat-value" id="cpuTemp">--°C</span></div><canvas class="stat-chart" id="cpuChart" width="100" height="40"></canvas></div>
+                        <div class="stat-card"><div class="stat-icon ram-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg></div><div class="stat-info"><span class="stat-label">RAM Used</span><span class="stat-value" id="ramUsed">-- GB</span></div><canvas class="stat-chart" id="ramChart" width="100" height="40"></canvas></div>
+                        <div class="stat-card"><div class="stat-icon disk-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="stat-info"><span class="stat-label">Disk Free</span><span class="stat-value" id="diskFree">-- GB</span></div><canvas class="stat-chart" id="diskChart" width="100" height="40"></canvas></div>
+                        <div class="stat-card"><div class="stat-icon net-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div><div class="stat-info"><span class="stat-label">Net Speed</span><span class="stat-value" id="netSpeed">-- Mb/s</span></div><canvas class="stat-chart" id="netChart" width="100" height="40"></canvas></div>
+                        <div class="stat-card"><div class="stat-icon gpu-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="stat-info"><span class="stat-label">GPU Temp</span><span class="stat-value" id="gpuTemp">--°C</span></div><canvas class="stat-chart" id="gpuChart" width="100" height="40"></canvas></div>
+                        <div class="stat-card"><div class="stat-icon uptime-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="stat-info"><span class="stat-label">Uptime</span><span class="stat-value" id="sysUptime">--:--</span></div><canvas class="stat-chart" id="uptimeChart" width="100" height="40"></canvas></div>
+                    </div>
+                    <div class="imgui-window"><div class="imgui-window-header"><span class="imgui-window-title"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>Console Output</span><div class="imgui-window-controls"><button class="imgui-ctrl-btn" id="consoleClear">Clear</button><button class="imgui-ctrl-btn" id="consoleToggle">▼</button></div></div><div class="console-body" id="consoleBody"><div class="console-lines" id="consoleLines"></div></div></div>
+                </div>
+
+                <!-- ==================== CLEANER ==================== -->
+                <div class="tab-content" id="tab-cleaner">
+                    <div class="content-header"><h1>System Cleaner</h1><div class="header-actions"><button class="btn btn-accent" id="btnScanJunk">Scan</button><button class="btn btn-danger" id="btnCleanAll">Clean All</button></div></div>
+                    <div class="cleaner-summary" id="cleanerSummary">
+                        <div class="cs-item"><span class="cs-value" id="totalJunk">0 GB</span><span class="cs-label">Total Junk</span></div>
+                        <div class="cs-item"><span class="cs-value" id="totalFiles">0</span><span class="cs-label">Files Found</span></div>
+                        <div class="cs-item"><span class="cs-value" id="totalCategories">6</span><span class="cs-label">Categories</span></div>
+                    </div>
+                    <div class="cleaner-grid" id="cleanerGrid"></div>
+                    <div class="clean-progress-section" id="cleanProgress" style="display:none"><div class="imgui-window"><div class="imgui-window-header"><span class="imgui-window-title">Cleaning Progress</span></div><div class="clean-progress-body"><div class="clean-progress-info"><span id="cleanCurrentFile">Initializing...</span><span id="cleanPercentage">0%</span></div><div class="progress-bar large"><div class="progress-fill accent" id="cleanBar"></div></div><div class="clean-stats"><span>Files Removed: <strong id="cleanFilesRemoved">0</strong></span><span>Space Freed: <strong id="cleanSpaceFreed">0 MB</strong></span></div></div></div></div>
+                </div>
+
+                <!-- ==================== BOOSTER ==================== -->
+                <div class="tab-content" id="tab-booster">
+                    <div class="content-header"><h1>Performance Booster</h1><div class="header-actions"><button class="btn btn-accent" id="btnBoostAll"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Boost All</button></div></div>
+                    <div class="booster-grid" id="boosterGrid"></div>
+                </div>
+
+                <!-- ==================== GAME MODE ==================== -->
+                <div class="tab-content" id="tab-gamemode">
+                    <div class="content-header"><h1>Game Mode</h1></div>
+                    <div class="gamemode-hero">
+                        <div class="gm-icon-large" id="gmIconLarge">🎮</div>
+                        <h2 id="gmTitle">Game Mode is OFF</h2>
+                        <p class="gm-desc">Maximize FPS by killing background processes, setting high priority, disabling visual effects, and optimizing network for low latency.</p>
+                        <button class="btn btn-accent btn-large" id="btnGameMode">Activate Game Mode</button>
+                    </div>
+                    <div class="gm-tweaks">
+                        <div class="imgui-window"><div class="imgui-window-header"><span class="imgui-window-title">Game Mode Tweaks</span></div><div class="gm-tweaks-body" id="gmTweaksBody"></div></div>
+                    </div>
+                    <div class="gm-stats-row" id="gmStats">
+                        <div class="gm-stat"><span class="gm-stat-value" id="gmFps">--</span><span class="gm-stat-label">Est. FPS Gain</span></div>
+                        <div class="gm-stat"><span class="gm-stat-value" id="gmRamFreed">--</span><span class="gm-stat-label">RAM Freed</span></div>
+                        <div class="gm-stat"><span class="gm-stat-value" id="gmProcsKilled">--</span><span class="gm-stat-label">Processes Stopped</span></div>
+                        <div class="gm-stat"><span class="gm-stat-value" id="gmLatency">--</span><span class="gm-stat-label">Latency Reduction</span></div>
+                    </div>
+                </div>
+
+                <!-- ==================== STARTUP ==================== -->
+                <div class="tab-content" id="tab-startup">
+                    <div class="content-header"><h1>Startup Manager</h1><div class="header-actions"><button class="btn btn-accent" id="btnDisableAll">Disable Non-Essential</button></div></div>
+                    <div class="startup-list" id="startupList"></div>
+                </div>
+
+                <!-- ==================== NETWORK ==================== -->
+                <div class="tab-content" id="tab-network">
+                    <div class="content-header"><h1>Network Optimizer</h1><div class="header-actions"><button class="btn btn-accent" id="btnSpeedTest">Speed Test</button><button class="btn btn-ghost" id="btnFlushDns">Flush DNS</button></div></div>
+                    <div class="network-grid">
+                        <div class="network-card"><h3>Connection Info</h3><div class="network-info-grid" id="netInfoGrid"></div></div>
+                        <div class="network-card"><h3>Speed Test Results</h3><div class="speed-test-display"><div class="speed-metric"><span class="speed-icon down">↓</span><div><span class="speed-value" id="speedDown">---</span><span class="speed-unit">Mb/s</span></div><span class="speed-label">Download</span></div><div class="speed-divider"></div><div class="speed-metric"><span class="speed-icon up">↑</span><div><span class="speed-value" id="speedUp">---</span><span class="speed-unit">Mb/s</span></div><span class="speed-label">Upload</span></div><div class="speed-divider"></div><div class="speed-metric"><span class="speed-icon ping">◆</span><div><span class="speed-value" id="speedPing">---</span><span class="speed-unit">ms</span></div><span class="speed-label">Ping</span></div></div></div>
+                    </div>
+                    <div class="imgui-window" style="margin-top:16px"><div class="imgui-window-header"><span class="imgui-window-title">Network Tweaks</span></div><div class="network-tweaks-body" id="netTweaksBody"></div></div>
+                </div>
+
+                <!-- ==================== REGISTRY ==================== -->
+                <div class="tab-content" id="tab-registry">
+                    <div class="content-header"><h1>Registry Cleaner</h1><div class="header-actions"><button class="btn btn-accent" id="btnScanRegistry">Scan Registry</button><button class="btn btn-danger" id="btnFixRegistry">Fix Issues</button></div></div>
+                    <div class="registry-results" id="registryResults"><div class="empty-state"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><p>Click "Scan Registry" to find issues</p></div></div>
+                </div>
+
+                <!-- ==================== PRIVACY ==================== -->
+                <div class="tab-content" id="tab-privacy">
+                    <div class="content-header"><h1>Privacy Shield</h1><div class="header-actions"><button class="btn btn-accent" id="btnPrivacyScan">Scan Trackers</button><button class="btn btn-danger" id="btnPrivacyClean">Clean All</button></div></div>
+                    <div class="privacy-grid" id="privacyGrid"></div>
+                </div>
+
+                <!-- ==================== DISK ANALYZER ==================== -->
+                <div class="tab-content" id="tab-diskanalyzer">
+                    <div class="content-header"><h1>Disk Analyzer</h1><div class="header-actions"><button class="btn btn-accent" id="btnAnalyzeDisk">Analyze</button></div></div>
+                    <div class="disk-overview" id="diskOverview"></div>
+                    <div class="disk-breakdown" id="diskBreakdown"></div>
+                </div>
+
+                <!-- ==================== PROCESSES ==================== -->
+                <div class="tab-content" id="tab-processes">
+                    <div class="content-header"><h1>Process Manager</h1><div class="header-actions"><button class="btn btn-danger" id="btnKillSelected">End Selected</button><button class="btn btn-ghost" id="btnRefreshProcs">Refresh</button></div></div>
+                    <div class="process-table-wrap"><table class="process-table"><thead><tr><th></th><th>Process</th><th>PID</th><th>CPU %</th><th>RAM</th><th>Status</th><th>Action</th></tr></thead><tbody id="processTableBody"></tbody></table></div>
+                </div>
+
+                <!-- ==================== SYSTEM INFO ==================== -->
+                <div class="tab-content" id="tab-sysinfo">
+                    <div class="content-header"><h1>System Information</h1><div class="header-actions"><button class="btn btn-ghost" id="btnCopySysInfo">Copy to Clipboard</button></div></div>
+                    <div class="sysinfo-grid" id="sysinfoGrid"></div>
+                </div>
+
+                <!-- ==================== BENCHMARK ==================== -->
+                <div class="tab-content" id="tab-benchmark">
+                    <div class="content-header"><h1>System Benchmark</h1><div class="header-actions"><button class="btn btn-accent" id="btnRunBenchmark">Run Benchmark</button></div></div>
+                    <div class="benchmark-results" id="benchmarkResults"><div class="empty-state"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><p>Click "Run Benchmark" to test your system</p></div></div>
+                </div>
+
+                <!-- ==================== DUPLICATES ==================== -->
+                <div class="tab-content" id="tab-duplicates">
+                    <div class="content-header"><h1>Duplicate File Finder</h1><div class="header-actions"><button class="btn btn-accent" id="btnScanDuplicates">Scan for Duplicates</button><button class="btn btn-danger" id="btnDeleteDuplicates">Delete Selected</button></div></div>
+                    <div class="duplicates-results" id="duplicatesResults"><div class="empty-state"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><rect x="8" y="2" width="13" height="16" rx="1"/><rect x="3" y="6" width="13" height="16" rx="1"/></svg><p>Click "Scan for Duplicates" to find duplicate files</p></div></div>
+                </div>
+
+                <!-- ==================== SECURITY ==================== -->
+                <div class="tab-content" id="tab-security">
+                    <div class="content-header"><h1>Security Scanner</h1><div class="header-actions"><button class="btn btn-accent" id="btnSecurityScan">Full Scan</button></div></div>
+                    <div class="security-score-section" id="securityScoreSection"></div>
+                    <div class="security-results" id="securityResults"><div class="empty-state"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><p>Click "Full Scan" to check system security</p></div></div>
+                </div>
+
+                <!-- ==================== SETTINGS ==================== -->
+                <div class="tab-content" id="tab-settings">
+                    <div class="content-header"><h1>Settings</h1></div>
+                    <div class="settings-sections">
+                        <div class="imgui-window"><div class="imgui-window-header"><span class="imgui-window-title">Appearance</span></div><div class="settings-body">
+                            <div class="setting-item"><div class="setting-info"><span class="setting-name">Accent Color</span><span class="setting-desc">Choose the UI accent color</span></div><div class="color-picker" id="colorPicker"><button class="color-swatch active" data-color="#6c5ce7" style="background:#6c5ce7"></button><button class="color-swatch" data-color="#00b894" style="background:#00b894"></button><button class="color-swatch" data-color="#e17055" style="background:#e17055"></button><button class="color-swatch" data-color="#0984e3" style="background:#0984e3"></button><button class="color-swatch" data-color="#fd79a8" style="background:#fd79a8"></button><button class="color-swatch" data-color="#fdcb6e" style="background:#fdcb6e"></button><button class="color-swatch" data-color="#00cec9" style="background:#00cec9"></button><button class="color-swatch" data-color="#e84393" style="background:#e84393"></button></div></div>
+                            <div class="setting-item"><div class="setting-info"><span class="setting-name">Scanline Effect</span><span class="setting-desc">Enable CRT scanline overlay</span></div><label class="imgui-toggle"><input type="checkbox" id="toggleScanlines" checked><span class="toggle-slider"></span></label></div>
+                            <div class="setting-item"><div class="setting-info"><span class="setting-name">Font Size</span><span class="setting-desc">Adjust the interface font size</span></div><div class="imgui-slider-container"><input type="range" class="imgui-slider" min="12" max="18" value="14" id="fontSizeSlider"><span class="slider-value" id="fontSizeValue">14px</span></div></div>
+                        </div></div>
+                        <div class="imgui-window" style="margin-top:16px"><div class="imgui-window-header"><span class="imgui-window-title">General</span></div><div class="settings-body">
+                            <div class="setting-item"><div class="setting-info"><span class="setting-name">Auto-Optimize on Load</span><span class="setting-desc">Automatically optimize when the page loads</span></div><label class="imgui-toggle"><input type="checkbox" id="toggleAutoOpt"><span class="toggle-slider"></span></label></div>
+                            <div class="setting-item"><div class="setting-info"><span class="setting-name">Notifications</span><span class="setting-desc">Show toast notifications</span></div><label class="imgui-toggle"><input type="checkbox" id="toggleNotifs" checked><span class="toggle-slider"></span></label></div>
+                            <div class="setting-item"><div class="setting-info"><span class="setting-name">Sound Effects</span><span class="setting-desc">Play sounds on actions</span></div><label class="imgui-toggle"><input type="checkbox" id="toggleSounds"><span class="toggle-slider"></span></label></div>
+                            <div class="setting-item"><div class="setting-info"><span class="setting-name">Live Monitoring</span><span class="setting-desc">Real-time stat updates on dashboard</span></div><label class="imgui-toggle"><input type="checkbox" id="toggleMonitoring" checked><span class="toggle-slider"></span></label></div>
+                        </div></div>
+                        <div class="settings-about"><div class="about-logo">Space Central<span class="accent">.</span></div><p>Advanced System Optimizer v4.0.0</p><p class="about-copy">© 2026 Space Central. Free for everyone.</p></div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
